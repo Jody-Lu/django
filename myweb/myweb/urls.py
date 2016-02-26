@@ -15,6 +15,10 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 
+# Import view function from trips app.
+from trips.views import hello_world
+
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^hello/$', hello_world),
 ]
